@@ -111,7 +111,7 @@ angular.module('http-auth-interceptor', [])
             authServiceProvider.pushToBuffer(response.config, deferred);
           }
 
-          $rootScope.$broadcast('event:auth-loginRequired');
+          $rootScope.$broadcast('event:auth-loginRequired', response);
           return deferred.promise;
         }
         // otherwise
